@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="">
+    <header
+        class="text-center flex justify-center items-center flex-col space-y-4 bg-[url('images/banner_1.png')] text-white bg-no-repeat bg-cover bg-blend-overlay bg-[#00000066] py-16">
+        <h1 class="text-4xl font-bold">Taste Our Delicious Best Foods</h1>
+        <p class="w-1/2 text-center">There are many variations of passages of Lorem Ipsum available, but the majority
+            have suffered alteration in
+            some form, by injected humou.</p>
+        <div class="flex flex-row gap-4">
+            <input id="search_field_name" type="text" placeholder="Type Food Name - best one"
+                class="input input-bordered input-warning w-96 text-black" />
+            <button id="btn_search_name" class="btn btn-warning text-black">Search</button>
+        </div>
+        <div class="flex flex-row gap-4">
+            <input id="search_field_letter" type="text" placeholder="Type a Letter"
+                class="input input-bordered input-warning w-96 text-black" />
+            <button id="btn_search_letter" class="btn btn-warning text-black">Search</button>
+        </div>
+    </header>
+
+    <main class="w-11/12 mx-auto text-center">
+
+        <!-- ! list of caregories -->
+        <section class="my-4 space-y-4">
+            <h1 class="text-3xl font-semibold">List of Categories</h1>
+            <div id="category_container" class="flex space-x-4 text-center justify-center">
+                <!-- <button class="btn btn-outline">food</button> -->
+            </div>
+        </section>
+
+        <!-- ! list of areas -->
+        <section class="my-4 space-y-4">
+            <h1 class="text-3xl font-semibold">List of Areas</h1>
+            <div id="area_container" class="flex space-x-4 text-center justify-center flex-wrap gap-4">
+                <!-- <button class="btn btn-outline">food</button> -->
+            </div>
+        </section>
+
+        <!-- ! list of ingredient -->
+        <!-- <section class="my-4 space-y-4">
+            <h1 class="text-3xl font-semibold">List of Ingredient</h1>
+            <div id="ingredient_container" class="flex space-x-4 text-center justify-center flex-wrap gap-4">
+            </div>
+        </section> -->
+
+
+
+        <!-- ! modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+
+        <dialog id="my_modal_1" class="modal">
+
+            <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+
+                <div id="details_container">
+                </div>
+
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+
+
+        <!-- ! all foods -->
+        <section class="my-20">
+            <h1 class="text-3xl font-semibold my-8">Your Favourite Food</h1>
+            <div id="card_container" class="grid grid-cols-2 gap-4">
+
+                <!-- ! dummy card 1 -->
+                <!-- <div class="flex border-2 gap-4">
+                    <div>
+                        <img src="./images/Rectangle 3980.png" alt="">
+                    </div>
+                    <div class="flex items-center justify-center flex-col gap-4 text-center">
+                        <h1 class="text-xl font-bold">Food</h1>
+                        <p class="text-center">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Neque, id.</p>
+                        <button class="btn btn-warning">Details</button>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <div>
+                <button id="btn_show_all" class="btn btn-warning my-8">Show All</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
